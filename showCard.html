@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selected card</title>
+    <h1>heeeres your card</h1>
+    <p>{{ question }}</p>
+
+    <form action="{{ url_for('showAnswer')}}" method="post">
+        <input type = "hidden" name = "confidence" value = confidence />
+        <input type = "hidden" name = "answer" value = answer />
+        <input type="submit" value="Show me the answer">
+      </form>
+</head>
+<body>
+
+</body>
+</html>

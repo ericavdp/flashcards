@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Flashcard App</title>
+    <link href="../static/newCard.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href ="/showMakeCard">Make a new card</a></li>
+                <li><a href="/showReviewCards">Review Cards</a></li>
+            </ul>
+        </nav>
+      </div>
+
+      <div>
+        <h1>Show me flashcards</h1>
+        <form action="{{ url_for('displayCard') }}" method="post">
+            <input type="radio" name="mode" value="train"> Training mode<br>
+            <input type="radio" name="mode" value="female"> Default<br>
+            <!--Space to select by review tag or confidence level
+        <label for="inputQuestion">Question</label>
+        <input type="text" name="inputTags" id="inputTags" required>
+        <label for="inputConfidence">Confidence level (1-10)</label>
+        <input type="number" name="inputConfidence" id="inputConfidence" required>
+        -->
+        <input type="submit" value="Show me the first flashcard">
+      </form>
+      </div>
+
+      <footer>
+        <p>&copy; Boop</p>
+      </footer>
+
+    </div>
+  </body>
+</html>

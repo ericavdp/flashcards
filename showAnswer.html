@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selected card</title>
+    <h1>heeeres your answer</h1>
+    <p>{{ answer }}</p>
+    <h1>heeres your previous confidence level</h1>
+    <p>{{ confidence }}</p>
+    <h1>How confident are you now?</h1>
+    <form action="{{ url_for('updateCard') }}" method="post">
+        <label for="inputConfidence">Confidence level (1-10)</label>
+        <input type="number" name="inputConfidence" id="inputConfidence" required>
+        <input type="submit" value="Update this card and show me a new one">
+      </form>
+
+</head>
+<body>
+
+</body>
+</html>
